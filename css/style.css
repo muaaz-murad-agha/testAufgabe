@@ -172,7 +172,7 @@ header nav .toggle-menu {
 }
 .landing .landing-img {
     height: 912px;
-    background-image: url(../images/groundlanding.jpg);
+    background-image: url(../images/groundlanding.png);
     background-size: cover;
     position: relative;
     top: -150px;
@@ -329,7 +329,7 @@ header nav .toggle-menu {
 }
 
 .buchung-box .buchen .right .img-hinter {
-background-image: url(../images/handy.PNG);
+background-image: url(../images/handy.png);
 background-size:cover;
 width: 100%; 
 height: 100%;
