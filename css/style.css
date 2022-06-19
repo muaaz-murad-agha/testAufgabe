@@ -172,7 +172,7 @@ header nav .toggle-menu {
 }
 .landing-img {
     height: 912px;
-    background-image: url(/images/Ebene\ 1.png);
+    background-image: url(/images/groundlanding.png);
     background-size: cover;
     position: relative;
     top: -150px;
@@ -301,7 +301,7 @@ header nav .toggle-menu {
     background-color: var(--font-main-color);
     border-radius: 37px;
     transform: rotate(10deg);
-    transition: 0.3s;
+    transition: 0.9s;
 }
 .right::after {
     content: '';
@@ -309,7 +309,7 @@ header nav .toggle-menu {
     width: 323px;
     top:30%;
     transform: translateY(-50%);
-    left: -50%;
+    left: -65%;
     background-image: url(/images/mitte.png);
     background-size: cover;
     padding: 0;
@@ -317,19 +317,20 @@ header nav .toggle-menu {
     position: absolute;
     transform: rotate(-22deg);
     z-index: -1;
-    transition: 0.3s;
+    transition: 0.9s;
 }
 
 
 .right:hover::after  {
-     transform: rotate(-25deg);
+     transform: rotate(-30deg);
+
 }
 .buchung-box .right:hover{
      transform: rotate(15deg);
 }
 
 .right .img-hinter {
-background-image: url(/images/handy2.png);
+background-image: url(/images/handy.png);
 background-size:cover;
 width: 100%; 
 height: 100%;
