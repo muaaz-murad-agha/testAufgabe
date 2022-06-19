@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
-      <!-- Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <title>Testaufgabe</title>
-
 </head>
 <body>
     <header>
@@ -21,6 +20,7 @@
           <img src="images/logo.png" alt="Logo" />
         </a>
         <nav>
+          <i class="fas fa-bars toggle-menu"></i>
           <ul>
             <li><a class="active" href="#lösungen">Lösungen</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -35,7 +35,6 @@
     <!--Strat landing-->
     <div class="landing">
         <div class="landing-img">
-          <div class="overlay"></div>
             <div class="container">
                     <div class="text">
                         <h3>Arbeiten, wann & wie es Dir am besten passt.</h3>
@@ -50,8 +49,22 @@
    <div class="buchung-box">
       <div class="container">
          <div class="buchen">
+                                          <form action="" class="datum-suche klein">
+                                        <input placeholder="02.07.2022" type="date"  id="von">
+                                        <span>-</span>
+                                        <input placeholder="07.07.2022" name="von"type="date"  id="bis">
+                                          <select id="option"   form="option">
+                                            <option value="fisursalon">Fisursalon</option>
+                                            <option value="fisursalon">Fisursalon</option>
+                                            <option value="fisursalon">Fisursalon</option>
+                                            <option value="fisursalon">Fisursalon</option>
+                                          </select>
+                                         <input type="number"  placeholder="1" min="1" id="num">
+                                       <a href="" class="but-2">Jetzt finden</a>
+                                        </form>      
                    <!-- Hier ist Handy -->
-                      <span class="right">
+                      <div class="right">
+                        <div class="overlay"></div>
                           <div class="img-hinter">
                                       <div class="handy-container">
                                     <div class="handy-header">
@@ -74,11 +87,11 @@
                                             <option value="fisursalon">Fisursalon</option>
                                           </select>
                                          <input type="number"  name="total_adults" placeholder="1" min="1" id="num">
-                                       <a href="">Jetzt finden</a>
+                                       <a href="" class="but-2">Jetzt finden</a>
                                         </form>
                                   </div>
                                  </div>
-                               </span>
+                               </div>
                 <!-- end handy -->
                           <div class="left">
                               <div class="text2">
@@ -86,17 +99,17 @@
                                   <h3>Finden Sie die passende Immobilie für Ihr Vorhaben!</h3>
                                   <p>Praesent tincidunt lacus lobortis dui tempus, a feugiat augue sodales. In tortor eros, facilisis sed vestibulum et,viverra eu nunc. Aliquam iaculis est risus, et placerat purus volutpat tempor.</p>
                               </div>
-                              <a href="" class="buttonstyle">Buchung anfragen</a>
+                              <a href="" class="buttonstyle but-1">Buchung anfragen</a>
                           </div>
                         </div>
           </div>
+   </div>
     </div>
     <!-- end buchung section -->
     <section class="vermiet">
       <div class="container">
         <div class="miet">
-              <div class="images-raum">
-            </div>
+              <div class="images-raum"></div>
             <div class="text-box">
               <h6>Für Vermieter & Mieter</h6>
               <h3>Nutzen Sie den Raum</h3>
@@ -104,8 +117,8 @@
               augue sodales. In tortor eros, facilisis sed vestibulum
                   et, viverra eu nunc. Aliquam iaculis est risus, et placerat
                   purus volutpat tempor. Lorem ipsum dolor sit amet,</p>
-                  <a href="" class="buttonstyle">Tipps für Vermieter</a>      
-                  <a href="">Mehr über uns</a>
+                  <a href="" class="buttonstyle ">Tipps für Vermieter</a>      
+                  <a href="" class="link">Mehr über uns</a>
            </div>
         </div>
       </div>
@@ -161,8 +174,8 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
           </div>
           <div class="info">
-            <a href=""><i class="fa-solid fa-location-dot"></i>Hannover, Schlägerst.</a>
-            <span><i class="fa-solid fa-user"></i> 1 -10</span>
+            <a href=""><i class="fa-solid fa-location-dot"></i>Hannover, Schlägerst</a>
+            <span><i class="fa-solid fa-user"></i> 1-10</span>
           </div>
         </div>
         <div class="box">
@@ -172,7 +185,7 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit</p>
           </div>
            <div class="info">
-            <a href=""><i class="fa-solid fa-location-dot"></i>Hannover, Vahrenwald.</a>
+            <a href=""><i class="fa-solid fa-location-dot"></i>Hannover,ahrenwald.</a>
             <span><i class="fa-solid fa-user"></i> 5 -9</span>
           </div>
         </div>
@@ -244,17 +257,17 @@
                       </div>
                       <div class="box">
                     <ul class="social">
-                    
+                    <li>
+                        <a href="#" class="youtube">
+                          <i class="fab fa-facebook"></i>
+                        </a>
+                      </li>
                       <li>
-                        <a href="#" class="twitter">
+                        <a href="#" class="instagram">
                           <i class="fab fa-instagram"></i>
                         </a>
                       </li>
-                      <li>
-                        <a href="#" class="youtube">
-                          <i class="fab fa-youtube"></i>
-                        </a>
-                      </li>
+                      
                     </ul>
                   </div>
               <div>

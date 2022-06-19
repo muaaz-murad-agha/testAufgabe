@@ -26,13 +26,18 @@ ul {
     margin-left: auto;
     margin-right: auto;
    
-    
   }
   /* Small */
   @media (min-width: 768px) {
     .container {
       width: 750px;
+       
     }
+    .container{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
   }
   /* Medium */
   @media (min-width: 992px) {
@@ -44,9 +49,26 @@ ul {
   @media (min-width: 1200px) {
     .container {
       width: 1170px;
+      
     }
   }
+  /* Handy Padding */
 
+  /* mittel Gößer  */
+ @media (max-width: 700px) {
+    .container {
+      padding-left: 60px;
+      padding-right: 60px;
+      
+    }
+  }
+    @media (max-width: 540px) {
+    .container {
+      padding-left: 13px;
+      padding-right: 13px;
+      
+    }
+  }
 /* End Global Rules*/
 /* algemein */
 .buttonstyle{
@@ -59,19 +81,21 @@ ul {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    display: inline-block;
 }
 /* end algemein */
-/* strat heading */
+/* strat header */
 header {
     margin-top: 20px;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
 header .container{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 
@@ -84,15 +108,7 @@ header .container ul li:nth-child(3)  {
     margin-right: 64px;
     position: relative;
 }
-header .container ul li:nth-child(3)::after{
-    content: '';
-    height: 34px;
-    width: 2px;
-    top: 0;
-    right: -32px;
-    background-color: var(--font-main-color);
-    position: absolute;
-}
+
 
 header .container ul li i {
     padding:0 10px;
@@ -104,6 +120,50 @@ header .container ul li a{
     font-size: 16px;
     font-weight: 800;
     color: var(--font-main-color);
+}
+header nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+  header .container ul li:nth-child(3)::after{
+    content: '';
+    height: 34px;
+    width: 2px;
+    top: 0;
+    right: -32px;
+    background-color: var(--font-main-color);
+    position: absolute;
+}
+}
+@media (max-width: 767px) {
+        header nav ul {
+            display: none;
+        }
+        header nav .toggle-menu:hover + ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgb(0 0 0 / 70%);
+        }
+        header nav ul li{
+            border-bottom: 3px solid var(--font-main-color);
+                padding: 5px 10px;
+                 margin: 6px;
+                 padding-bottom: 12px;   
+
+        }
+        header nav ul li a {
+            margin: 20px;
+            padding: 15px !important;
+
+        }
 }
 /* end heading */
 /* start landing  */
@@ -129,7 +189,7 @@ header .container ul li a{
 .landing .text {
     position: absolute;
     max-height: 280px;
-    max-width: 509px;
+    max-width: 521px;
     margin-left: 0;
     top: 40%;
     transform: translatey(-50%);
@@ -145,10 +205,24 @@ header .container ul li a{
     font-weight: 500;
     max-width: 432px;
 }
+@media (max-width: 470px){
+    .landing .text h3{
+        font-size: 35px;
+    }
+     .landing .text p{
+        font-size: 18px;
+    }
+    .landing .text{
+        padding-left:20px ;
+        padding-right:20px;
+    }
+}
 /* End landing */
 /* strat buchung-box */
 .buchung-box {
+    
    display: flex;
+   flex-wrap: wrap;
    position: relative;
    top: -411px;
 }
@@ -156,13 +230,15 @@ header .container ul li a{
     width: 100%;
     border-radius: 28px;
     background-color: #F8FAFF;
-    padding: 63px 59px 49px;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
     z-index: 150;
     padding: 47px 57px;
 }
+
+
+
 .buchung-box .buchen .text2{
     max-width: 477px;
     margin-bottom: 35px;
@@ -172,6 +248,11 @@ header .container ul li a{
     font-weight: 800;
     color: #9D4F86;
     margin-bottom: 10px;
+}
+@media (max-width: 990px){
+    .buchung-box  .buchen h6{
+        font-size: 22px;
+    }
 }
 .buchung-box .buchen h3 {
     font-size: 30px;
@@ -188,15 +269,28 @@ header .container ul li a{
     font-weight: 400;
     color: #545E77;
     line-height: 1.7;
-    
-
 }
+
 .buchung-box  .buchen a {
-   margin: 20px 0 48px;
+   margin: 14px 0 2px;
+   display: inline-block;
 }
 
-/* start handy ebnene */
-.buchung-box .container .right {
+@media (max-width: 1200px) {
+  .buchung-box  .buchen  p{
+    max-width: 300px;
+   
+  }
+  .buchung-box  .buchen .but-1 {
+    margin-top: 35px;
+    
+  }
+}
+
+
+
+/* start handy ebene */
+.buchung-box  .right {
     float: right;
     top: -280px;
     position: relative;
@@ -207,7 +301,7 @@ header .container ul li a{
     background-color: var(--font-main-color);
     border-radius: 37px;
     transform: rotate(10deg);
-    transition: 0.3;
+    transition: 0.3s;
 }
 .right::after {
     content: '';
@@ -225,9 +319,13 @@ header .container ul li a{
     z-index: -1;
     transition: 0.3s;
 }
+
+
 .right:hover::after  {
-     transform: rotate(-28deg);
-     
+     transform: rotate(-25deg);
+}
+.buchung-box .right:hover{
+     transform: rotate(15deg);
 }
 
 .right .img-hinter {
@@ -268,7 +366,7 @@ border: 4px solid var(--font-main-color);
     font-size: 32px;
     font-weight: 800;
 }
- .right form {
+ .buchen .datum-suche {
     margin-top: 12px;
     background-color:#F8FAFF;
     width: 100%;
@@ -278,8 +376,8 @@ border: 4px solid var(--font-main-color);
 .right form span{
     margin: 0;
 }
-.right form select,
-.right form input {
+.buchen .datum-suche select,
+.buchen .datum-suche input {
     margin:4px 2px ;
     position: relative;
     font-size: 11px;
@@ -290,17 +388,29 @@ border: 4px solid var(--font-main-color);
     color: #707070;
     font-family: Helvetica Neue;
 }
-.right form #von,
-.right form #bis{
+.buchen .datum-suche #von,
+.buchen .datum-suche #bis{
     width: 44%;
     display: inline;
 }
+.buchen .datum-suche select::after,
+.buchen .datum-suche input[type="number"]::after {
+    content: "sdkjskj";
+    top:0;
+    transform: translateY(-50%);
+    left: 10px;
+    position:absolute;
+    height: 15px;
+    width: 20px;
+    background-color: var(--font-main-color);
+    color: #707070;
+    font-size: 11px;
+    font-weight: 500;
+}
 
-.right form input[type="number"]::before,
-.right form input[id="bis"]::before,
-.right form input[id="von"]::before,
-.right form .option::before {
-    content: 'von';
+.buchen .datum-suche input[id="bis"]::before,
+.buchen .datum-suche input[id="von"]::before
+ {
     top:0;
     transform: translateY(-50%);
     left: 10px;
@@ -313,16 +423,22 @@ border: 4px solid var(--font-main-color);
     font-weight: 500;
 
 }
-.right form select {
+.buchen .datum-suche input[id="bis"]::before{
+content: 'Bis';
+}
+.buchen .datum-suche input[id="von"]::before{
+content: 'von';
+}
+.buchen .datum-suche select {
     width: 67%;
 }
-.right form input[type="number"] {
+.buchen .datum-suche input[type="number"] {
     width: 27%;
 }
 
 
-.right form a {
-    left: 57%;
+.buchen .datum-suche a {
+    left: 44%;
     bottom: -5px;
     position: relative;
     background-color: #9D4F86;
@@ -338,6 +454,129 @@ border: 4px solid var(--font-main-color);
     margin: 12px 8px 8px;
    
 }
+@media (max-width: 1200px) {
+ .buchung-box .container .right {
+    transform:rotate(0);
+    top: -120px;
+}
+.buchung-box .container .right::after{
+
+display: none;
+}
+}
+@media (max-width: 990px) {
+.buchung-box .container .right {
+    display: block;
+    right: 50%;
+    transform: translatex(50%);
+    
+}
+.buchung-box  .buchen h6 {
+    display: block;
+
+}
+
+}
+/*klass mit klein  verbergern */
+.buchung-box .container .buchen  .klein{
+    display: none;}
+
+    @media(max-width:990px){
+.buchung-box .container .buchen  .right {
+    right: 25%;
+}
+.buchung-box .container .buchen .but-1{
+    margin-top:90px;
+}
+}
+
+@media(max-width:770px){
+.buchung-box .container .buchen  .right {
+    right: 50%;
+}
+.buchung-box .container .buchen .but-1{
+    margin-top:25px;
+}
+}
+/* IN MITTLERWEILE von festen größe ausziehen bis width 470px züruck */
+ @media(max-width:700px){
+.buchung-box .container .buchen  .right {
+    width: 100%;
+    height: 100%;
+}
+.buchung-box .container .buchen  .datum-suche {
+   padding: 20px;
+   margin-bottom: 40px;
+ }
+ .buchen .datum-suche #von, .buchen .datum-suche #von ,
+ .buchen .datum-suche #von, .buchen .datum-suche #bis ,
+ .buchung-box .container .buchen  .datum-suche input ,
+ .buchung-box .container .buchen  .datum-suche  select 
+ 
+  {
+    margin-top: 10px;
+   font-size: 26px;
+   width: 100%;
+ }
+ .buchung-box .container .buchen  .datum-suche span {
+    display: none;
+ }
+  .buchung-box .container .buchen  .datum-suche  .but-2{
+    font-size:20px;
+     left: 30% ;
+     text-align: center;
+  }
+}
+/* hier wiederum zu BILD und Fest */
+ @media(max-width:472px){
+.buchung-box .container .buchen  .right {
+   height: 522px;
+    width: 288px;  
+}
+.buchung-box .container .buchen  .datum-suche {
+   padding: 20px;
+   margin-bottom: 40px;
+ }
+ .buchung-box .container .buchen .right h4 { 
+    margin-top: 40%;
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    font-weight: 800;
+}
+ .buchen .datum-suche #von, .buchen .datum-suche #von ,
+ .buchen .datum-suche #von, .buchen .datum-suche #bis ,
+ .buchung-box .container .buchen  .datum-suche input ,
+ .buchung-box .container .buchen  .datum-suche  select 
+ 
+  {
+    margin-top: 4px;
+   font-size: 16px;
+   width: 100%;
+ }
+
+ .buchung-box .container .buchen  .datum-suche span {
+    display: none;
+ }
+  .buchung-box .container .buchen  .datum-suche  .but-2{
+    font-size:12px;
+     left: 30% ;
+     text-align: center;
+  }
+}
+/* WICTIG FOrm verbergeren und KLein Form hinzufügen */
+/* @media(max-width:700px){
+.buchung-box .container .buchen  .right {
+    display: none;
+}
+.buchung-box .container .buchen  .klein{
+    display: block;
+}
+.buchung-box .container .buchen {
+    overflow: hidden;
+}
+
+} */
 /* end handy ebnene */
 /* start vermiet section  */
 
@@ -352,15 +591,17 @@ border: 4px solid var(--font-main-color);
     border-radius: 28px;
     background-color: #F8FAFF;
     padding: 40px 59px 49px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     z-index: 15;
     max-height: 380px;
 }
 .vermiet .images-raum {
 position: relative;
 z-index: 18;
+width: 100%;
 }
 .vermiet .images-raum::after,
 .vermiet .images-raum::before{
@@ -394,6 +635,15 @@ bottom: -200px;
 .vermiet .images-raum:hover::after{
 top: -185px;
 }
+@media (max-width: 990px){
+   
+    .vermiet .images-raum{
+        display: none;
+    }
+}
+.vermiet .text-box {
+    width: 100%;
+}
    .vermiet .text-box h6 {
     font-size: 14px;
     font-weight: 800;
@@ -412,12 +662,27 @@ top: -185px;
     font-weight: 400;
     color: #545E77;
     line-height: 1.2;
-    max-height: 100px;
     margin-bottom: 30px;
     
     }
        
+@media (max-width: 1200px) {
+    .vermiet {
+    
+    top: -360px;
+}
 
+
+.vermiet .text-box > a {
+padding: 10px ;
+}
+
+}
+@media (max-width: 1200px){
+    .vermiet .text-box {
+        font-size: 12px;
+    }
+}
 
 
 /* end miet section  */
@@ -474,7 +739,22 @@ top: -185px;
     border:3px solid var(--font-main-color) ;
     padding: 2px 10px;
 } 
+@media (max-width: 1200px) {
+.merkmale {
+    
+    top: -280px;
+}
 
+
+.vermiet .text-box > a {
+padding: 10px ;
+}
+.merkmale .container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+}
 
 /* end merkmale */
 
@@ -508,7 +788,7 @@ padding-bottom:20px ;
 }
 .projekt  .container .content-boxs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
 }
 .projekt .box {
@@ -580,10 +860,21 @@ padding-bottom:20px ;
    
     
        }
+       @media (max-width: 1200px) {
+
+
+.projekt  .container .content-boxs {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+}
+
     
 /* End projekt */
 /* start Zeichnen */
 .zeichnen{
+    
     margin: 80px auto 80px;
     position: relative;
     top: -270px;
@@ -596,8 +887,12 @@ padding-bottom:20px ;
 .zeichnen .imgs-zeichnen{
     padding: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+}.zeichnen .imgs-zeichnen img {
+    display: block;
+    margin-top: 20px;
 }
 /* end Zeichnen */
 /* Start Rose  */
@@ -636,9 +931,21 @@ padding-bottom:20px ;
     left: -31px;
 }
 .rose  .container .content img[id="bild3"] {
-   
+   display: inline;
       bottom: -24px;
     right: 24%;
+}
+@media (max-width: 990px) {
+   .rose  .container .content img[id="bild3"] {
+    display: none;
+   }
+}
+@media (max-width: 730px) {
+    .rose  .container .content img[id="bild1"], 
+    .rose  .container .content img[id="bild2"] {
+    display: none;
+   }
+ 
 }
 /* End Rose  */
 /* start footer */
@@ -648,7 +955,7 @@ padding-bottom:20px ;
 }
 .footer .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
 }
 .footer .box ul li{
@@ -659,4 +966,32 @@ font-size: 14px;
 font-weight: bold;
   color: #000000;
 }
+.footer .social li {
+display: inline-block ;
+font-size: 30px;
+color: #000000;
+
+}
+
+.footer .social li:last-child {
+    color: #000000;
+}
+.footer .social li:last-child i {
+
+margin-left: 20px;
+
+}
+
+       @media (max-width: 1200px) {
+
+
+.footer .container{
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+}
+
+    
+
 /* end footer */
