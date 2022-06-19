@@ -170,7 +170,7 @@ header nav .toggle-menu {
 .landing {
     margin-bottom: 0;
 }
-.landing-img {
+.landing .landing-img {
     height: 912px;
     background-image: url(/images/groundlanding.jpg);
     background-size: cover;
@@ -303,14 +303,14 @@ header nav .toggle-menu {
     transform: rotate(10deg);
     transition: 0.9s;
 }
-.right::after {
+ .buchung-box .buchen .right::after {
     content: '';
+    background-image: url(/images/mitte.PNG);
     height: 175px;
     width: 323px;
     top:30%;
     transform: translateY(-50%);
     left: -65%;
-    background-image: url(/images/mitte.PNG);
     background-size: cover;
     padding: 0;
     border-radius: 16px;
@@ -320,7 +320,6 @@ header nav .toggle-menu {
     transition: 0.9s;
 }
 
-
 .right:hover::after  {
      transform: rotate(-30deg);
 
@@ -329,7 +328,7 @@ header nav .toggle-menu {
      transform: rotate(15deg);
 }
 
-.right .img-hinter {
+.buchung-box .buchen .right .img-hinter {
 background-image: url(/images/handy.PNG);
 background-size:cover;
 width: 100%; 
